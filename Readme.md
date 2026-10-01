@@ -17,3 +17,18 @@
 ``` bash 
     uvicorn main:app --reload
 ```
+
+## Web search
+
+
+
+```json
+{
+    "query": "latest climate research",
+    "recent_only": true,
+    "time_range": "week",
+    "max_results": 5
+}
+```
+
+`recent_only` defaults to `false`. When enabled without a `time_range`, results are filtered to the past week. Supported ranges are `day`, `week`, `month`, and `year`; responses include publication dates and a `recent_data_check` summary.
