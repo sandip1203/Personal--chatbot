@@ -14,3 +14,11 @@ class DatabaseSettings(BaseSettings):
 db_settings = DatabaseSettings()
 
 print(db_settings.DATABASE_URL)
+
+
+class SearchSettings(BaseSettings):
+    TAVILY_API_KEY: str | None = None
+    model_config = _base_config
+
+
+search_settings = SearchSettings()
